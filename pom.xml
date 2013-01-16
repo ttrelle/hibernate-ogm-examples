@@ -1,0 +1,74 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>de.codecentric.blog</groupId>
+	<artifactId>springdata-mongodb</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
+
+	<name>Spring Data MongoDB Examples</name>
+	<url>https://github.com/ttrelle/spring-data-examples/tree/master/springdata-mongodb</url>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<hibernateOgmVersion>0.9</hibernateOgmVersion><!-- TODO: check maven central -->
+		<junit.version>4.10</junit.version>		
+	</properties>
+
+	<dependencies>
+
+        <dependency>
+            <groupId>org.hibernate.ogm</groupId>
+            <artifactId>hibernate-ogm-core</artifactId>
+            <version>4.0.0-SNAPSHOT</version>
+            <scope>provided</scope>
+        </dependency>        
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <version>1.6.6</version>
+        </dependency>
+        <dependency>
+            <groupId>org.hibernate.ogm</groupId>
+            <artifactId>hibernate-ogm-mongodb</artifactId>
+            <version>${hibernateOgmVersion}</version>
+            <scope>provided</scope>
+        </dependency>
+		
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.3.2</version>
+				<configuration>
+					<source>1.6</source>
+					<target>1.6</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+	<organization>
+		<name>codecentric AG</name>
+		<url>http://www.codecentric.de</url>
+	</organization>
+
+	<developers>
+		<developer>
+			<name>Tobias Trelle</name>
+			<email>tobias.trelle@codecentric.de</email>
+		</developer>
+	</developers>
+
+	<repositories>
+		<repository>
+			<id>spring-snapshot</id>
+			<name>Spring Maven SNAPSHOT Repository</name>
+			<url>http://repo.springsource.org/libs-snapshot</url>
+		</repository>
+	</repositories>
+</project>
