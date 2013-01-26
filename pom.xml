@@ -48,6 +48,17 @@
 			<version>4.10</version>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>org.jboss.jbossts.arjunacore</groupId>
+			<artifactId>arjuna</artifactId>
+			<version>4.17.3.Final</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.jboss.jbossts.jta</groupId>
+			<artifactId>narayana-jta</artifactId>
+			<version>4.17.3.Final</version>
+		</dependency>
 
 	</dependencies>
 

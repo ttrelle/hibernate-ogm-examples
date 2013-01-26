@@ -6,18 +6,23 @@ import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 
+import org.hibernate.annotations.GenericGenerator;
+
 @Entity
 @NamedQueries({
 	@NamedQuery(
-			name="byItemsQuantity", 
-			query = "SELECT o FROM Order o")
+		name="byItemsQuantity", 
+		query = "SELECT o FROM Order o JOIN o.items i WHERE i.quantity = :quantity")
 })
 public class Order {
 
+    @GeneratedValue(generator = "uuid")
+    @GenericGenerator(name = "uuid", strategy = "uuid2")
 	@Id private String id;
 	
 	private Date date;
