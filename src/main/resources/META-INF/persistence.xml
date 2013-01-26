@@ -9,7 +9,7 @@
               <property name="hibernate.search.Rules.directory_provider" value="ram"/>
               <property name="hibernate.ogm.datastore.provider"
                         value="org.hibernate.ogm.datastore.mongodb.impl.MongoDBDatastoreProvider"/>
-              <property name="hibernate.ogm.mongodb.database" value="odm"/>
+              <property name="hibernate.ogm.mongodb.database" value="odm_hibernate"/>
               <property name="hibernate.ogm.mongodb.host" value="localhost"/>
               <property name="hibernate.ogm.mongodb.port" value="27017"/>
           </properties>
