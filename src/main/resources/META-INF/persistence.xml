@@ -3,8 +3,10 @@
        xsi:schemaLocation="
             http://java.sun.com/xml/ns/persistence
             http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
-       <persistence-unit name="primary">
+       <persistence-unit name="primary" transaction-type="RESOURCE_LOCAL">
           <provider>org.hibernate.ogm.jpa.HibernateOgmPersistence</provider>
+          <class>hibernate.Order</class>
+          <class>hibernate.Item</class>
           <properties>
               <property name="hibernate.search.Rules.directory_provider" value="ram"/>
               <property name="hibernate.ogm.datastore.provider"
@@ -13,7 +15,5 @@
               <property name="hibernate.ogm.mongodb.host" value="localhost"/>
               <property name="hibernate.ogm.mongodb.port" value="27017"/>
           </properties>
-          <class>hibernateogm.Order</class>
-          <class>hibernateogm.Item</class>
       </persistence-unit>
     </persistence>
